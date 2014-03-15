@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="lab">
+<head lang="ja">
+  <meta charset="UTF-8">
+  <title>Lab</title>
+  <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/flatly/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!--header-->
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="lab">Lab</a>
+      </div>
+      <div class="navbar-collapse collapase">
+      </div>
+    </div>
+  </div>
+
+  <!-- load view -->
+  <div ui-view></div>
+
+  <!-- javascript -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+  <script src="app.js"></script>
+  <script src="states/lab/labController.js"></script>
+
+</body>
+</html>
