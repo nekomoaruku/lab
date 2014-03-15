@@ -1,5 +1,5 @@
 (function() {
-  var labController = function($scope) {
+  var roomController = function($scope) {
     $scope.message = "";
     $scope.messages = [];
 
@@ -11,6 +11,6 @@
       document.querySelector('textArea').focus();
     }
   };
-  labController.$inject = ['$scope'];
-  app.controller('labController', labController);
+  roomController.$inject = ['$scope'];
+  app.controller('roomController', roomController);
 })();
