@@ -7,7 +7,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/lab');
 
   // Set up router
-  // For url, you must prefix the '/'
+  // For url, you must prefix the '/' !
   $stateProvider
     .state('lab', {
       url: '/lab',
