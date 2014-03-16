@@ -1,3 +1,4 @@
+<link href="states/room/room.css" rel="stylesheet">
 <div class="container">
   <div class="form-group">
     <span>Message</span>
@@ -7,7 +8,7 @@
     <button ng-click="submitMessage()" type="submit" class="btn btn-primary btn-sm">Submit</button>
   </div>
   <hr>
-  <div ng-repeat="message in messages" class="well well-sm">
-    {{message}}
+  <div ng-repeat="item in messages" ng-class="{'room-tag': item.tags.length}" class="well well-sm">
+    {{item.message}}
   </div>
 </div>

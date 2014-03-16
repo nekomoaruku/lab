@@ -13,4 +13,3 @@ app.config(function($stateProvider, $urlRouterProvider) {
       controller: 'roomController'
     });
 });
-
