@@ -9,8 +9,11 @@
         var newMessage = {
           message: $scope.message,
           date: new Date(),
-          tags: tagManager.getTags($scope.message)
+          tags: tagManager.findTags($scope.message)
         };
+        if (newMessage.tags) {
+          tagManager.addTag(newMessage.message);
+        }
         $scope.messages.unshift(newMessage);
       }
       $scope.message = "";
