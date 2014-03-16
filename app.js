@@ -9,7 +9,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('room', {
       url: '/room',
-      templateUrl: 'states/room/room.html',
-      controller: 'roomController'
+      views: {
+        '@': {
+          templateUrl: 'states/room/room.html'
+        },
+        'timeline@room': {
+          templateUrl: 'states/room/room_timeline.html',
+          controller: 'roomTimelineController'
+        },
+        'tagList@room': {
+          templateUrl: 'states/room/room_tagList.html',
+          controller: 'roomTagListController'
+        }
+      }
     });
 });

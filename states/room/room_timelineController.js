@@ -1,5 +1,6 @@
 (function() {
-  var roomController = function($scope, tagManager) {
+  var roomTimelineController = function($scope, tagManager) {
+
     $scope.message = "";
     $scope.messages = [];
 
@@ -14,8 +15,9 @@
       }
       $scope.message = "";
       document.querySelector('textArea').focus();
-    }
+    };
+
   };
-  roomController.$inject = ['$scope', 'tagManager'];
-  app.controller('roomController', roomController);
+  roomTimelineController.$inject = ['$scope', 'tagManager'];
+  app.controller('roomTimelineController', roomTimelineController);
 })();

@@ -1,14 +1,12 @@
-<link href="states/room/room.css" rel="stylesheet">
 <div class="container">
-  <div class="form-group">
-    <span>Message</span>
-    <textarea id="textArea" ng-model="message" class="form-control" rows="3"></textarea>
-  </div>
-  <div class="form-group">
-    <button ng-click="submitMessage()" type="submit" class="btn btn-primary btn-sm">Submit</button>
-  </div>
-  <hr>
-  <div ng-repeat="item in messages" ng-class="{'room-tag': item.tags.length}" class="well well-sm">
-    {{item.message}}
+   <div class="row">
+    <div ui-view="timeline" class="col-xs-7"></div>
+    <div ui-view="tagList" class="col-xs-5"></div>
   </div>
 </div>
+
+<style>
+  .room-tag {
+    background-color: #CAE7F2;
+  }
+</style>
