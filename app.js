@@ -1,9 +1,9 @@
-var app = angular.module('lab', ['ui.router']);
+var app = angular.module('lab', ['ui.router', 'ui.bootstrap']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
   // For any unmatched url
-  $urlRouterProvider.otherwise('/room');
+  $urlRouterProvider.otherwise('/uploader');
 
   // Set up router
   $stateProvider
@@ -20,6 +20,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
         'tagList@room': {
           templateUrl: 'states/room/room_tagList.html',
           controller: 'roomTagListController'
+        }
+      }
+    })
+    .state('uploader', {
+      url: '/uploader',
+      views: {
+        '@': {
+          templateUrl: 'states/uploader/uploader.html'
+        },
+        'preview@uploader': {
+          templateUrl: 'states/uploader/uploader_preview.html',
+          controller: 'uploaderPreviewController'
         }
       }
     });

@@ -1,10 +1,20 @@
 <div ng-repeat="item in tagList">
+  <p><span class="label label-danger">{{item.tagName}}</span></p>
   <table class="table table-condensed table-hover">
-    <tr>
-      <th><span class="label label-danger">{{item.tagName}}</span></th>
-    </tr>
     <tr ng-repeat="message in item.messages">
-      <td>{{message.text}}</td>
+      <td>
+        {{message.text}}
+      </td>
+      <td>
+        <div class="dropdown">
+          <button type="button" class="btn btn-xs dropdown-toggle">Edit</button>
+          <ul class="dropdown-menu">
+            <li><a>編集</a></li>
+            <li><a><del>取り消し線を引く</del></a></li>
+            <li><a>リストから削除</a></li>
+          </ul>
+        </div>
+      </td>
     </tr>
   </table>
 </div>
