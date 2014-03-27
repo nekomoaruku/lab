@@ -1,12 +1,12 @@
 (function() {
-  var roomTagListController = function($scope, tagManager) {
+  var roomTagListController = function($scope, tagManagerService) {
 
-    $scope.tagList = tagManager.tagList;
+    $scope.tagList = tagManagerService.tagList;
     $scope.$watch('tagList', function(newValue) {
       $scope.tagList = newValue;
     });
 
   };
-  roomTagListController.$inject = ['$scope', 'tagManager'];
+  roomTagListController.$inject = ['$scope', 'tagManagerService'];
   app.controller('roomTagListController', roomTagListController);
 })();

@@ -1,5 +1,5 @@
 (function() {
-  var roomTimelineController = function($scope, tagManager) {
+  var roomTimelineController = function($scope, tagManagerService) {
 
     $scope.message = "";
     $scope.messages = [];
@@ -9,10 +9,10 @@
         var newMessage = {
           message: $scope.message,
           date: new Date(),
-          tags: tagManager.findTags($scope.message)
+          tags: tagManagerService.findTags($scope.message)
         };
         if (newMessage.tags) {
-          tagManager.addTag(newMessage.message);
+          tagManagerService.addTag(newMessage.message);
         }
         $scope.messages.unshift(newMessage);
       }
@@ -21,6 +21,6 @@
     };
 
   };
-  roomTimelineController.$inject = ['$scope', 'tagManager'];
+  roomTimelineController.$inject = ['$scope', 'tagManagerService'];
   app.controller('roomTimelineController', roomTimelineController);
 })();

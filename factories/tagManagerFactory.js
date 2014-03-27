@@ -1,5 +1,5 @@
 (function() {
-  var tagManagerFactory = function($rootScope) {
+  var tagManagerService = function($rootScope) {
 
     var tagList = [
       {
@@ -58,5 +58,5 @@
     }
 
   };
-  app.factory('tagManager', tagManagerFactory);
+  app.factory('tagManagerService', tagManagerService);
 })();
