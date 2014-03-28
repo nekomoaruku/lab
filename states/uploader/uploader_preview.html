@@ -1,3 +1,11 @@
 <div>
-  Hello uploader preview.
+  <input type="file" id="fileBtn"
+      ng-model="file" ng-change="fileChosen()"/>
 </div>
+<img ng-src="{{uploadFile}}"/>
+
+<style>
+  img {
+    width: 400px;
+  }
+</style>
